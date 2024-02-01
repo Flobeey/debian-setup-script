@@ -9,7 +9,7 @@ sudo apt dist-upgrade
 sudo apt install git apt-transport-https btop pip -y
 
 # Install python and remove environment requirement
-sudo apt install python3-full
+sudo apt install python3-full -y
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 sudo rm /usr/lib/python3.12/EXTERNALLY-MANAGED
 
@@ -24,7 +24,7 @@ sudo touch /etc/apt/preferences.d/kali.pref
 sudo sh -c "echo 'Package: *'>/etc/apt/preferences.d/kali.pref; echo 'Pin: release a=kali-rolling'>>/etc/apt/preferences.d/kali.pref; echo 'Pin-Priority: 50'>>/etc/apt/preferences.d/kali.pref"
 
 # Install aptitude
-sudo apt install aptitude
+sudo apt install aptitude -y
 # This now means you can use the following command to install tools from kali 
 # sudo aptitude install -t kali-rolling PACKAGE-NAME 
 
@@ -37,21 +37,21 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 
 # Install sublime
 sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt-get install sublime-text -y
 
 # Installing go 
 wget "https://go.dev/dl/go1.21.6.src.tar.gz"
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
 
 # Setup go paths and other paths
-mkdir '/home/$USER/software'
+mkdir /home/$USER/software
 echo 'export PATH=$PATH:/home/$USER/.local/bin 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/$USER/software/go/bin
 export GOMODCACHE=/home/$USER/software/go/pkg/mod
 export GOPATH=/home/$USER/software/go
 export LC_ALL=en_NZ.UTF-8
-export LANG=en_NZ.UTF-8' >> .zshrc
+export LANG=en_NZ.UTF-8' >> .bashrc
 
 
 # Download the ansible playbook
