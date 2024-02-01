@@ -54,7 +54,7 @@ export GOMODCACHE=/home/$USER/software/go/pkg/mod
 export GOPATH=/home/$USER/software/go
 export LC_ALL=en_NZ.UTF-8
 export LANG=en_NZ.UTF-8' >> .bashrc
-
+source /home/$USER/.bashrc
 
 # Download the ansible playbook
 cd $HOME/software && git clone https://github.com/Flobeey/kali-ansible-build.git
