@@ -37,7 +37,7 @@ if [ "$is_kali" = "n" ]; then
     # sudo aptitude install -t kali-rolling PACKAGE-NAME 
 
 else
-    echo "Skipping Kali Linux setup."
+    echo "Skipping Kali repo setup."
 fi
 
 # Install ansible
