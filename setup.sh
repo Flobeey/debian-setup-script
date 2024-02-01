@@ -40,12 +40,13 @@ sudo apt-get update
 sudo apt-get install sublime-text -y
 
 # Installing go 
-wget "https://go.dev/dl/go1.21.6.src.tar.gz"
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xvf /home/$USER/go1.21.6.src.tar.gz
-rm -rf /home/$USER/go1.21.6.src.tar.gz
+wget "https://go.dev/dl/go1.21.6.linux-amd64.tar.gz"
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xvf /home/$USER/go1.21.6.linux-amd64.tar.gz
+rm -rf /home/$USER/go1.21.6.linux-amd64.tar.gz
 
 # Setup go paths and other paths
 mkdir /home/$USER/software
+mkdir /home/$USER/software/go
 echo 'export PATH=$PATH:/home/$USER/.local/bin 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/$USER/software/go/bin
