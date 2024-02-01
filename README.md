@@ -10,4 +10,13 @@ Currently sets up some basic things
 - installs sublime text
 
 This also adds the kali repositories and if you would like to install tools from the kali repo the below command can be used
-# sudo aptitude install -t kali-rolling PACKAGE-NAME 
+```
+sudo aptitude install -t kali-rolling PACKAGE-NAME 
+```
+
+If anything fails in the ansible script this can be found in the software folder
+just run the below once any errors have been addressed
+```
+ansible-playbook ~/software/debian-ansible-build/main.yml
+```
+
