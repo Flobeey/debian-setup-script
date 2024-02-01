@@ -72,4 +72,4 @@ export PATH=$PATH:/usr/local/go/bin
 cd $HOME/software && git clone https://github.com/Flobeey/debian-ansible-build.git
 
 # Run the playbook
-$HOME/.local/bin/ansible-playbook $HOME/software/kali-ansible-build/main.yml
+$HOME/.local/bin/ansible-playbook $HOME/software/debain-ansible-build/main.yml
