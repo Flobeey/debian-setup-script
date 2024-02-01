@@ -41,7 +41,7 @@ sudo apt-get install sublime-text -y
 
 # Installing go 
 wget "https://go.dev/dl/go1.21.6.src.tar.gz"
-rm -rf /usr/local/go && tar -C /usr/local -xvf /home/$USER/go1.21.6.src.tar.gz
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xvf /home/$USER/go1.21.6.src.tar.gz
 rm -rf /home/$USER/go1.21.6.src.tar.gz
 
 # Setup go paths and other paths
