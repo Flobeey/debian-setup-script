@@ -2,11 +2,11 @@
 
 # Update fresh image
 sudo apt update
-sudo apt upgrade
+sudo apt upgrade -y
 sudo apt dist-upgrade
 
 # Install initial tools
-sudo apt install git apt-transport-https btop
+sudo apt install git apt-transport-https btop pip -y
 
 # Install python and remove environment requirement
 sudo apt install python3-full
@@ -44,7 +44,7 @@ wget "https://go.dev/dl/go1.21.6.src.tar.gz"
 rm -rf /usr/local/go && tar -C /usr/local -xzf go1.21.6.linux-amd64.tar.gz
 
 # Setup go paths and other paths
-mkidr '/home/$USER/software'
+mkdir '/home/$USER/software'
 echo 'export PATH=$PATH:/home/$USER/.local/bin 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:/home/$USER/software/go/bin
