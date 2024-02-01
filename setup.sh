@@ -1,4 +1,7 @@
-vil-win#!/bin/bash
+#!/bin/bash
+
+# Ask the user if this is Kali Linux
+read -p "Is this Kali Linux? (y/n): " is_kali
 
 # Update fresh image
 sudo apt update
@@ -12,9 +15,6 @@ sudo apt install git curl apt-transport-https btop pip vim gem rubygems -y
 sudo apt install python3-full -y
 sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 sudo rm /usr/lib/python3.12/EXTERNALLY-MANAGED
-
-# Ask the user if this is Kali Linux
-read -p "Is this Kali Linux? (y/n): " is_kali
 
 # Check user input
 if [ "$is_kali" = "n" ]; then
