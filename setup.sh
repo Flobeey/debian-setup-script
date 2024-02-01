@@ -17,7 +17,7 @@ sudo rm /usr/lib/python3.12/EXTERNALLY-MANAGED
 read -p "Is this Kali Linux? (y/n): " is_kali
 
 # Check user input
-if [ "$is_kali" = "y" ]; then
+if [ "$is_kali" = "n" ]; then
     # Add the Kali packages
     sudo sh -c "echo 'deb https://http.kali.org/kali kali-rolling main non-free contrib' > /etc/apt/sources.list.d/kali.list"
 
