@@ -55,7 +55,8 @@ export LANG=en_NZ.UTF-8' >> .bashrc
 
 
 # Download the ansible playbook
-cd $HOME
+source .bashrc
+cd $HOME/software
 git clone https://github.com/Flobeey/kali-ansible-build.git
 cd kali-ansible-build
 
