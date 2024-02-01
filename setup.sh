@@ -42,7 +42,7 @@ sudo apt-get install sublime-text -y
 # Installing go 
 wget "https://go.dev/dl/go1.21.6.src.tar.gz"
 rm -rf /usr/local/go && tar -C /usr/local -xzf /home/$USER/go1.21.6.linux-amd64.tar.gz
-rm -rf /home/$USER/go1.21.6.linux-amd64.tar.gz
+rm -rf /home/$USER/go1.21.6.src.tar.gz
 
 # Setup go paths and other paths
 mkdir /home/$USER/software
@@ -59,4 +59,4 @@ export LANG=en_NZ.UTF-8' >> .bashrc
 cd $HOME/software && git clone https://github.com/Flobeey/kali-ansible-build.git
 
 # Run the playbook
-ansible-playbook /home/$HOME/software/kali-ansible-build/main.yml
+$HOME/.local/bin/ansible-playbook $HOME/software/kali-ansible-build/main.yml
