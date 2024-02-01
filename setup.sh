@@ -66,7 +66,12 @@ export GOMODCACHE=/home/$USER/software/go/pkg/mod
 export GOPATH=/home/$USER/software/go
 export LC_ALL=en_NZ.UTF-8
 export LANG=en_NZ.UTF-8' >> .bashrc
+export PATH=$PATH:/home/$USER/.local/bin
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/$USER/software/go/bin
+export GOPATH=/home/$USER/software/go
+export GOMODCACHE=/home/$USER/software/go/pkg/mod
+
 
 # Download the ansible playbook
 cd $HOME/software && git clone https://github.com/Flobeey/debian-ansible-build.git
