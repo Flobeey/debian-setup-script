@@ -8,3 +8,6 @@ Currently sets up some basic things
 - installs go and paths
 - installs full python, pip and ansible
 - installs sublime text
+
+This also adds the kali repositories and if you would like to install tools from the kali repo the below command can be used
+# sudo aptitude install -t kali-rolling PACKAGE-NAME 
