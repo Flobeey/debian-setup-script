@@ -6,7 +6,7 @@ sudo apt upgrade -y
 sudo apt dist-upgrade
 
 # Install initial tools
-sudo apt install git apt-transport-https btop pip -y
+sudo apt install git apt-transport-https btop pip vim -y
 
 # Install python and remove environment requirement
 sudo apt install python3-full -y
