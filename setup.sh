@@ -51,25 +51,8 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install sublime-text -y
 
-# Installing go 
-wget "https://go.dev/dl/go1.21.6.linux-amd64.tar.gz"
-sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xvf /home/$USER/go1.21.6.linux-amd64.tar.gz
-rm -rf /home/$USER/go1.21.6.linux-amd64.tar.gz
-
-# Setup go paths and other paths
-mkdir /home/$USER/software
-mkdir /home/$USER/software/go
-echo 'export PATH=$PATH:/home/$USER/.local/bin 
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/$USER/software/go/bin
-export GOMODCACHE=/home/$USER/software/go/pkg/mod
-export GOPATH=/home/$USER/software/go' >> .bashrc
-export PATH=$PATH:/home/$USER/.local/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/home/$USER/software/go/bin
-export GOPATH=/home/$USER/software/go
-export GOMODCACHE=/home/$USER/software/go/pkg/mod
-
+# Installing Go
+curl -sS https://webi.sh/golang | sh
 
 # Download the ansible playbook
 cd $HOME/software && git clone https://github.com/Flobeey/debian-ansible-build.git
